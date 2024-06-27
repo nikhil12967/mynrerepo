@@ -3,40 +3,12 @@ name: CI Pipeline
 on:
   push:
     branches:
-      - *  # Adjust the branch as needed
+      - main  # Adjust the branch as needed
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      # SonarQube analysis step
-      - name: SonarQube Scan
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Ensure you have SONAR_TOKEN secret set in your GitHub repository
-        run: |
-          # Run your SonarQube scanner command here using the settings from sonar-qube.yaml
-          # Example:
-          # sonar-scanner -Dsonar.projectKey=your_project_key -Dsonar.sources=.
-
-      # Veracode scanning step
-      - name: Veracode Scan
-        env:
-          VERACODE_API_ID: ${{ secrets.VERACODE_API_ID }}
-          VERACODE_API_KEY: ${{ secrets.VERACODE_API_KEY }}
-        run: |
-          # Run your Veracode scanning command here using the settings from veracode.yaml
-          # Example:
-          # veracode-scanner --config veracode.yaml
-
-      # Test case execution step
-      - name: Run Test Cases
-        run: |
-          # Run your test cases using the settings from test-case.yaml
-          # Example:
-          # pytest --config test-case.yaml
-
+      - name: Print Hello
+        run: echo "hello"
