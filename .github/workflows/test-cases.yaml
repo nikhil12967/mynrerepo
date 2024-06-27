@@ -1,0 +1,8 @@
+# Example test-case.yaml
+
+# Configuration for pytest
+pytest:
+  - name: Run Unit Tests
+    command: pytest
+    args: --verbose  # Adjust arguments as needed
+  # Add more test configurations as necessary

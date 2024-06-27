@@ -1,0 +1,12 @@
+# Example veracode.yaml
+
+# Veracode scanning configuration
+veracode:
+  configVersion: 1.0
+  scans:
+    - name: Veracode Scan
+      type: static
+      language: java  # Adjust based on your project language
+      files:
+        - .
+      # Add more Veracode scanning configuration as necessary

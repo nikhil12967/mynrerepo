@@ -1,0 +1,8 @@
+# Example sonar-qube.yaml
+
+# SonarQube configuration
+sonarqube:
+  projectKey: your_project_key
+  sources:
+    - .
+  # Add more SonarQube configuration as necessary
