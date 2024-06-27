@@ -10,5 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Hello
-        run: echo "hello"
+      # Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # SonarQube analysis step
+      - name: SonarQube Scan
+        run: echo "mysonar scan"
+      # Veracode scanning step
+      - name: Veracode Scan
+        run: echo "veracode scan"
+      
+      # Test case execution step
+      - name: Run Test Cases
+        run: echo "test scan"
